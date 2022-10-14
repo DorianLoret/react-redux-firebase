@@ -36,6 +36,7 @@ const App = () => {
             </button>
           </div>
         )}
+
         {user ? (
           <CreatePost uid={user.uid} displayName={user.displayName} />
         ) : (

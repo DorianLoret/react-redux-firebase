@@ -16,6 +16,7 @@ const Login = () => {
         loginEmail.current.value,
         loginPassword.current.value
       );
+      console.log(user);
     } catch (error) {
       console.log(error.message);
       setError(true);
@@ -35,7 +36,9 @@ const Login = () => {
             ref={loginPassword}
           />
           <input type="submit" value="Se connecter" />
-          <span>{error && "Mail ou mot de passe incorrect"}</span>
+          <span>
+            {error && "Le mail ou le mot de passe ne correspondent pas"}
+          </span>
         </form>
       </div>
     </div>
